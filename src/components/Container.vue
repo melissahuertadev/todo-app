@@ -4,11 +4,9 @@
         <input type="text" v-model="description" placeholder="Task description">
         <button v-on:click="addTask">Add</button>
     </div>
-    <div class="task" v-for="task in tasks" :key="task.id">
-        <div class="task-info">
-            <h4>{{ task.name }}</h4>
-            <p>{{ task.description }}</p>
-        </div>
+    <div class="task " v-for="task in tasks" :key="task.id">
+        <p> <strong>{{ task.name }}:</strong> {{ task.description }}</p>
+
         <button class="btn-rm" @click="removeTask(task.id)">
             <font-awesome-icon icon="fa-solid fa-trash" />
         </button>
@@ -108,11 +106,6 @@ input {
     border-radius: 5px;
     margin: 5px 10px;
     padding: 5px 10px;
-}
-
-.task-info {
-    display: contents;
-    align-content: center;
 }
 
 .btn-rm {

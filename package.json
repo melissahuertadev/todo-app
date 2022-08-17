@@ -14,8 +14,10 @@
     "@fortawesome/free-regular-svg-icons": "^6.1.2",
     "@fortawesome/free-solid-svg-icons": "^6.1.2",
     "@fortawesome/vue-fontawesome": "^3.0.1",
+    "autoprefixer": "^10",
     "aws-amplify": "^4.3.31",
     "core-js": "^3.8.3",
+    "postcss": "^8",
     "vue": "^3.2.13"
   },
   "devDependencies": {
