@@ -4,8 +4,6 @@ Amplify.configure(awsExports);
 
 import { createApp } from 'vue'
 import App from './App.vue'
-
-
 import AmplifyVue from '@aws-amplify/ui-vue';
 
 /* import the fontawesome core */
@@ -19,7 +17,6 @@ import { faTrash } from '@fortawesome/free-solid-svg-icons'
 
 /* add icons to the library */
 library.add(faTrash)
-
 
 const app = createApp(App);
 

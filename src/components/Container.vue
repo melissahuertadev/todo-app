@@ -21,6 +21,13 @@ import { API } from 'aws-amplify'
 import { createTodo, deleteTodo } from '../graphql/mutations'
 import { listTodos } from '../graphql/queries';
 
+/*
+ *
+ * addTask(): adds task using graphql query "createTodo", updates tasks list in frontend
+ * removeTask(): confirms if user wants to remove task, removes task using graphql query 
+ *               "deleteTodo", updates tasks list in frontend
+ * getTasks(): fetchs tasks using graphql query "listTodos", updates tasks list in frontend 
+ */
 export default {
     // eslint-disable-next-line vue/multi-word-component-names
     name: 'Container',
@@ -57,6 +64,8 @@ export default {
                 const input = {
                     id: id
                 }
+                if(!confirm('Estás seguro que deseas eliminar esta tarea?'))
+                    return;
                 await API.graphql({ query: deleteTodo, variables: { input } });
                 this.tasks = this.tasks.filter(e => e.id != id);
             } catch (e) {
@@ -73,7 +82,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 button,
 input {
     border-radius: 5px;

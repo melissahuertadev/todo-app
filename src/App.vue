@@ -1,12 +1,14 @@
 <template>
   <div id="app">
-    <h1>ToDo</h1>
+    <h1>To Do</h1>
     <Container />
   </div>
-
 </template>
 
 <script>
+/* 
+ * Use Container component
+ */
 import Container from './components/Container'
 
 export default {
@@ -17,7 +19,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
